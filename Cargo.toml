@@ -1,9 +1,18 @@
 [package]
 name = "zero2prod"
 version = "0.1.0"
+authors = ["Connor Youngs <email@connoryoungs.com>"]
 edition = "2021"
-
+[lib]
+path = "src/lib.rs"
 [dependencies]
+actix-web = "4.9.0"
+tokio = { version = "1.40.0", features = ["full"] }
+[dev-dependenices]
 
-[target.x86_64-unknown-linux-gnu]
-linker = "mold"
+[[bin]]
+path = "src/main.rs"
+name = "zero2prod"
+
+[dev-dependencies]
+reqwest = "0.12.8"
