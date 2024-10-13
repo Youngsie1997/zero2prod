@@ -9,6 +9,7 @@ path = "src/lib.rs"
 actix-web = "4.9.0"
 serde = { version = "1.0.210", features = ["derive"] }
 tokio = { version = "1.40.0", features = ["full"] }
+config = "0.14.0"
 
 [[bin]]
 path = "src/main.rs"
