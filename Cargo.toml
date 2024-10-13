@@ -7,9 +7,9 @@ edition = "2021"
 path = "src/lib.rs"
 [dependencies]
 actix-web = "4.9.0"
+figment = { version = "0.10.19", features = ["yaml"] }
 serde = { version = "1.0.210", features = ["derive"] }
 tokio = { version = "1.40.0", features = ["full"] }
-config = "0.14.0"
 
 [[bin]]
 path = "src/main.rs"
