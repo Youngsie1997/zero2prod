@@ -9,7 +9,6 @@ path = "src/lib.rs"
 actix-web = "4.9.0"
 serde = { version = "1.0.210", features = ["derive"] }
 tokio = { version = "1.40.0", features = ["full"] }
-[dev-dependenices]
 
 [[bin]]
 path = "src/main.rs"
@@ -17,3 +16,15 @@ name = "zero2prod"
 
 [dev-dependencies]
 reqwest = "0.12.8"
+
+[dependencies.sqlx]
+version = "0.8.2"
+default-features = false
+features = [
+  "runtime-tokio-rustls",
+  "macros",
+  "postgres",
+  "uuid",
+  "chrono",
+  "migrate",
+]
